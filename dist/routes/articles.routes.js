@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.router = void 0;
+const express_1 = require("express");
+const artic_controller_1 = require("../controllers/artic.controller");
+const session_1 = require("../middleware/session");
+const router = (0, express_1.Router)();
+exports.router = router;
+// router.get('/list-all', listAll);
+router.get('/list-all', session_1.checkJwt, artic_controller_1.listAll);
+// router.get('/delete-image/:prefix/:id_user/:date_updated_user', checkJwt, deleteImage);
+// router.get('/delete/:id_user/:date_updated_user', checkJwt, deleteUser);
+router.post('/create', session_1.checkJwt, artic_controller_1.create);
+router.post('/update', session_1.checkJwt, artic_controller_1.update);

@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.router = void 0;
+const express_1 = require("express");
+const image_controller_1 = require("../controllers/image.controller");
+const session_1 = require("../middleware/session");
+const router = (0, express_1.Router)();
+exports.router = router;
+router.get('/delete-image/:prefix/:id_user/:date_updated_user', session_1.checkJwt, image_controller_1.deleteImage);
+router.get('/delete-cover/:id_asociation_article/:id_article/:date_updated_article', session_1.checkJwt, image_controller_1.deleteCover);
+router.post('/upload', image_controller_1.uploadImage);
+router.post('/upload-item', image_controller_1.uploadItemImage);
+router.post('/move-item', session_1.checkJwt, image_controller_1.moveItemImage);

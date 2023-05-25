@@ -1,0 +1,12 @@
+{
+    "service": "gmail",
+    "auth": {
+        "type": "OAuth2",
+        "user": "eglos2022w@gmail.com",
+        "clientId": "582300090372-mnhfl2ok7olcpl0dgmiht9734vl16cr6.apps.googleusercontent.com",
+        "clientSecret": "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",
+        "refreshToken": "1//04DZYIhcIxi4kCgYIARAAGAQSNwF-L9IrapkrGuOZu-oeOblIEspEa6fdqKhYykkrar7jKVqaTytnNhXk7NCe6hQjf1MEqQiR8H8",
+        "accessToken": "",
+        "redirectUri": "https://developers.google.com/oauthplayground"
+    }
+}
